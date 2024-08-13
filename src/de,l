@@ -1,0 +1,57 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import axios from 'axios'
+const initialState = {
+    joke: "No Jokes"
+}
+
+
+
+const randomJoke = createAsyncThunk("ll", async (status) => {
+    console.log("success")
+    return axios.get(`https://api.chucknorris.io/jokes/random?category=${status}`)
+        .then((e) => {
+            console.log(e)
+            console.log("success")
+            return e.data.value
+        }).catch((e) => {
+            console.log(e)
+        })
+
+})
+
+const jockSlice = createSlice(
+    {
+
+        name: "jokeeeee",
+        initialState,
+      
+        extraReducers: (build) => {
+            build.addCase(randomJoke.pending, () => {
+                console.log("loading")
+            }).addCase(randomJoke.fulfilled,(state,action)=>{
+                state.joke=action.payload
+            })
+
+        }
+    }
+
+
+
+
+)
+
+export const { setJock } = jockSlice.actions
+export { randomJoke }
+export default jockSlice
+
+
+
+
+
+
+
+
+
+
+
+
