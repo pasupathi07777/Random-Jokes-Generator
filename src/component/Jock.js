@@ -37,7 +37,7 @@ const Jock = () => {
             <h1 className='font-bold text-[32px] '>Random Jokes </h1>
             <div className='jock w-full flex rounded overflow-hidden max-w-[500px] mt-3   '>
                
-                <input className='user-input w-full px-2 py-2 focus:outline-none ' value={userInput} onChange={(e) => setUserInput(e.target.value)} type="text" placeholder='Enter categoty' />
+                <input className='user-input w-full px-2 py-2 focus:outline-none ' value={userInput} onChange={(e) => setUserInput(e.target.value.toLocaleLowerCase())} type="text" placeholder='Enter categoty' />
                 <input type="submit" onClick={omClicks} className='btn bg-blue-500 px-2 py-2' value={`Get From ${userInput}`} />
             </div>
             <p className="para mt-3 text-[24px] text-center font-semibold ">{selector.jockes.joke}</p>
