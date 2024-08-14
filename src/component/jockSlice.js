@@ -15,6 +15,7 @@ const fetchData = createAsyncThunk("zz", (state) => {
     return axios.get(`https://api.chucknorris.io/jokes/random?category=${state}`)
         .then((e) => {
             return e.data.value
+           
 
         }).catch((e) => {
             console.log(e.response.data.error

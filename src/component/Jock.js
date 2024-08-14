@@ -44,7 +44,7 @@ const Jock = () => {
     return (
         <div className="total w-[100vw] h-[100vh] px-4 py-2 bg-gray-200   flex flex-col items-center">
 
-            <h1 className='font-bold text-[26px] md:text-[34px]  '>Random Jokes Generator </h1>
+            <h1 className='font-bold text-[26px] md:text-[34px]  '>Random Joke Generator </h1>
 
             <div className='jock w-full flex rounded overflow-hidden max-w-[600px] mt-3   '>
 
