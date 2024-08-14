@@ -44,9 +44,9 @@ const Jock = () => {
     return (
         <div className="total w-[100vw] h-[100vh] px-4 py-2 bg-gray-200   flex flex-col items-center">
 
-            <h1 className='font-bold text-[32px] '>Random Jokes </h1>
+            <h1 className='font-bold text-[26px] md:text-[34px]  '>Random Jokes Generator </h1>
 
-            <div className='jock w-full flex rounded overflow-hidden max-w-[500px] mt-3   '>
+            <div className='jock w-full flex rounded overflow-hidden max-w-[600px] mt-3   '>
 
                 <input className='user-input w-full px-2 py-2 focus:outline-none ' value={userInput} onChange={(e) => setUserInput(e.target.value.toLocaleLowerCase())} type="text" placeholder='Enter Category' />
 
